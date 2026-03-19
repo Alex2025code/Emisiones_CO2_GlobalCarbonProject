@@ -2,7 +2,11 @@
 
 Proyecto de análisis de emisiones de CO₂ utilizando datos del Global Carbon Project, incluyendo un dashboard interactivo desarrollado con Streamlit.
 ---
+## 📸 Vista del dashboard
 
+![Dashboard](ruta_imagen.png)
+
+---
 ## 🌱 Contexto
 
 El **dióxido de carbono (CO₂)** es el principal gas de efecto invernadero emitido por la actividad humana.  
