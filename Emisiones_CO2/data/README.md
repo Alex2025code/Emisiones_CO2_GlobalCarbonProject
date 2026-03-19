@@ -9,6 +9,3 @@ Este directorio está destinado a almacenar el dataset utilizado en el análisis
 
 🔗 **Fuente oficial del dataset:**  
 [Global Carbon Project – CO₂ Emissions Dataset](https://www.globalcarbonproject.org/carbonbudget)
-
-⚠️ *Por razones de tamaño y derechos de distribución, el archivo no se incluye directamente en este repositorio.*  
-Para reproducir el análisis, descarga el dataset desde la fuente oficial y colócalo en esta carpeta.
