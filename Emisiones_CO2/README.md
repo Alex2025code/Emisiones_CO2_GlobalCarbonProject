@@ -10,8 +10,8 @@ Comprender su evolución histórica permite identificar patrones de desarrollo i
 
 El **Global Carbon Project (GCP)** es una iniciativa científica internacional dedicada a **cuantificar las emisiones y sumideros de carbono** a nivel global, con el fin de **apoyar políticas climáticas basadas en evidencia**.
 
-🔗 **Fuente oficial del dataset:**  
-[Global Carbon Project – CO₂ Emissions Dataset](https://www.globalcarbonproject.org/carbonbudget)
+🔗 Fuente oficial del dataset:  
+https://www.globalcarbonproject.org/
 
 ---
 ## 📊 Descripción
