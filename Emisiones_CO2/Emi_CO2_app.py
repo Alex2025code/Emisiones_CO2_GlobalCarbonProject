@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import matplotlib.pyplot as plt
 
 st.set_page_config(
     page_title="Dashboard Emisiones CO2",
@@ -22,7 +21,7 @@ st.write("Análisis de emisiones usando datos del Global Carbon Project")
 @st.cache_data
 def load_data(): 
     
-    df = pd.read_csv("GCB2022v27_MtCO2_flat.csv")
+    df = pd.read_csv("data/GCB2022v27_MtCO2_flat.csv")
 
 # Limpieza básica de datos
     df = df.dropna(subset=["Country"])
