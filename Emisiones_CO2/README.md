@@ -1,9 +1,6 @@
-# 🌍 Análisis de Emisiones Globales de CO₂ (GCB2022v27)
+# 🌍 Dashboard de Emisiones de CO₂
 
-Este proyecto analiza la evolución histórica de las **emisiones de dióxido de carbono (CO₂)** a nivel global y por país, utilizando el dataset **GCB2022v27_MtCO2_flat.csv** publicado por el **Global Carbon Project (GCP)**.
-
-El objetivo principal es comprender cómo han evolucionado las emisiones desde una perspectiva histórica, identificar los principales emisores y analizar los cambios en las fuentes de energía a lo largo del tiempo.
-
+Proyecto de análisis de emisiones de CO₂ utilizando datos del Global Carbon Project, incluyendo un dashboard interactivo desarrollado con Streamlit.
 ---
 
 ## 🌱 Contexto
@@ -17,43 +14,57 @@ El **Global Carbon Project (GCP)** es una iniciativa científica internacional d
 [Global Carbon Project – CO₂ Emissions Dataset](https://www.globalcarbonproject.org/carbonbudget)
 
 ---
+## 📊 Descripción
 
-## 🎯 Objetivos del análisis
+Este proyecto analiza las emisiones de dióxido de carbono (CO₂) a nivel global, explorando tendencias históricas, distribución por país y fuentes de emisión.
 
-1. Realizar un **análisis exploratorio de datos (EDA)** para comprender la evolución global de las emisiones.  
-2. Identificar a los **principales emisores históricos** y su evolución a lo largo del tiempo.  
-3. Comparar las **fuentes de emisión** (carbón, petróleo, gas, etc.) y cómo ha cambiado su peso relativo.  
-4. Analizar casos específicos de interés, como **China** y **Estados Unidos**, los dos mayores emisores actuales.  
-5. Explorar visualizaciones avanzadas:
-   - Series de tiempo globales.  
-   - Gráficos por década.  
-   - Correlaciones entre fuentes.  
-   - Gráficos apilados y comparativos para mostrar la transición energética.
+Incluye:
+
+- Análisis exploratorio en Jupyter Notebook
+- Dashboard interactivo en Streamlit
 
 ---
 
-## 🧹 Tratamiento y análisis de datos
+## 🚀 Funcionalidades del Dashboard
 
-El notebook realiza los siguientes pasos:
-
-- Carga y limpieza del dataset.
-- Visualización de tendencias por tipo de fuente, periodo **1750-2021**.  
-- Filtrado del periodo **1925–2021** (era industrial moderna).  
-- Análisis descriptivo y exploratorio de las emisiones globales.  
-- Visualización de tendencias por tipo de fuente (carbón, petróleo, gas, etc.).  
-- Comparaciones entre países y períodos históricos.
+- 🌍 Mapa mundial de emisiones por país
+- 📈 Evolución de emisiones por país
+- 🏭 Top países emisores
+- 🧱 Distribución de emisiones por fuente
+- 📊 Evolución de emisiones por tipo de fuente
 
 ---
 
-## 📊 Visualizaciones principales
+## 🛠 Tecnologías utilizadas
 
-- **🌍 Evolución global de emisiones (1925–2021):** crecimiento casi exponencial desde mediados del siglo XX.  
-- **📈 Distribución por fuente de emisión:** predominio del carbón y el petróleo, con aumento progresivo del gas.  
-- **🇨🇳 vs 🇺🇸 Comparación China – EE.UU.:** transición del liderazgo en emisiones desde EE.UU. hacia China a partir de 2006.  
-- **📉 Impactos históricos:** caídas puntuales en 1932 (Gran Depresión), 1973 (crisis del petróleo) y 2020 (pandemia).
+- Python
+- Pandas
+- Plotly
+- Streamlit
 
 ---
+## 📂 Estructura del proyecto
+Emisiones_CO2/
+│
+├── Emi_CO2_app.py # Dashboard en Streamlit
+├── Emi_CO2_pais.ipynb # Análisis exploratorio
+├── README.md # Documentación principal
+├── LICENSE
+└── data/
+└── GCB2022v27_MtCO2_flat.csv
+---
+---
 
+## ▶️ Cómo ejecutar el proyecto
+
+1. Clonar el repositorio:
+   git clone https://github.com/Alex2025code/Emisiones_CO2_GlobalCarbonProject.git
+3. Ir a la carpeta del proyecto:
+   cd Emisiones_CO2
+5. Ejecutar el Dashboard:
+   streamlit run Emi_CO2_app.py
+
+---
 ## 🔎 Resultados destacados
 
 - Las emisiones globales se **multiplicaron exponencialmente** tras 1950.  
@@ -63,11 +74,6 @@ El notebook realiza los siguientes pasos:
 - Se observan **reducciones temporales** en periodos de crisis económicas globales.
 
 ---
-
-## 📁 Estructura del proyecto
-
----
-
 ## 🧠 Conclusión general
 
 El análisis evidencia que el crecimiento de las emisiones de CO₂ está estrechamente ligado al desarrollo industrial y al modelo energético basado en combustibles fósiles. Aunque algunos países han logrado estabilizar sus emisiones, la tendencia global sigue siendo ascendente, lo que plantea grandes desafíos para la **transición hacia energías limpias** y la **cooperación internacional** frente al cambio climático.
