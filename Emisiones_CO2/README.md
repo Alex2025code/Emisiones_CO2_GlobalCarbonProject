@@ -53,7 +53,6 @@ Emisiones_CO2/
 └── data/
 └── GCB2022v27_MtCO2_flat.csv
 ---
----
 
 ## ▶️ Cómo ejecutar el proyecto
 
