@@ -4,7 +4,6 @@ Proyecto de análisis de emisiones de CO₂ utilizando datos del Global Carbon P
 ---
 ## 📸 Vista del dashboard
 
-![Dashboard](ruta_imagen.png)
 
 ---
 ## 🌱 Contexto
