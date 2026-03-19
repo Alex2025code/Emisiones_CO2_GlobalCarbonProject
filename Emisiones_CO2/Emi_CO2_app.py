@@ -27,6 +27,7 @@ def load_data():
     df = df.dropna(subset=["Country"])
     df = df[~df["Country"].isin([
     "World",
+    "Global",
     "Asia",
     "Europe",
     "International Transport"
@@ -77,65 +78,7 @@ fig_map = px.choropleth(
 
 st.plotly_chart(fig_map, use_container_width=True)
 
-#---------------------------
-"""
-col1, col2 = st.columns(2)
-
-# MAPA
-with col1:
-
- st.subheader("🌍 Mapa mundial de emisiones de CO2")
- 
- year_map = st.slider(
-    "Selecciona el año para el mapa",
-    int(df["Year"].min()),
-    int(df["Year"].max()),
-    2020
-)
-
-df_map = df[df["Year"] == year_map]
-
-fig_map = px.choropleth(
-    df_map,
-    locations="Country",
-    locationmode="country names",
-    color="Total",
-    hover_name="Country",
-    color_continuous_scale="Reds",
-    title=f"Emisiones de CO2 por país en {year_map}"
-)
-
-st.plotly_chart(fig_map, use_container_width=True)
-
-# Top Emisores
-with col2:
-
-    st.subheader("Top países emisores")
-
-    year = st.slider(
-        "Selecciona año",
-        int(df["Year"].min()),
-        int(df["Year"].max()),
-        2020,
-        key="top_year"
-    )
-
-    df_year = df[df["Year"] == year]
-
-    top10 = df_year.sort_values(
-        "Total",
-        ascending=False
-    ).head(10)
-
-    fig2 = px.bar(
-        top10,
-        x="Country",
-        y="Total",
-        title=f"Top 10 emisores en {year}"
-    )
-
-    st.plotly_chart(fig2, use_container_width=True)"""
-# -------------------------
+#--------------------------
 # Seleccionar país
 # -------------------------
 st.subheader("🌍 Evolución emisiones de CO2 por país")
@@ -162,6 +105,41 @@ fig = px.line(
 
 st.plotly_chart(fig, use_container_width=True)
 
+#--------------------------
+# Métricas globales de emisiones
+#--------------------------
+st.subheader("🌍 Métricas globales de emisiones")
+
+latest_year = df["Year"].max()                            # Seleccionar el último año del dataset
+
+df_latest = df[df["Year"] == latest_year]                 # Filtrar el dataset
+
+global_emissions = df_latest["Total"].sum()               # Calcular emisiones globales
+
+# Encontrar el mayor emisor
+top_country = df_latest.sort_values(
+    "Total",
+    ascending=False
+).iloc[0]
+# Calcular participación global
+share_top = (top_country["Total"] / global_emissions) * 100
+# métricas
+col1, col2, col3 = st.columns(3)
+# Mostrar indicadores
+col1.metric(
+    "Emisiones globales",
+    f"{global_emissions:,.0f} MtCO₂"
+)
+
+col2.metric(
+    "Mayor emisor",
+    top_country["Country"]
+)
+
+col3.metric(
+    "Participación del mayor emisor",
+    f"{share_top:.1f} %"
+)
 # -------------------------
 # Top emisores
 # -------------------------
