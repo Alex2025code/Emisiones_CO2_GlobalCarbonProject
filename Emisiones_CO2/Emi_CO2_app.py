@@ -22,7 +22,7 @@ st.write("Análisis de emisiones usando datos del Global Carbon Project")
 @st.cache_data
 def load_data(): 
     
-    path = os.path.join("data", "GCB2022v27_MtCO2_flat.csv")
+    path = os.path.join("Emisiones_CO2", "data", "GCB2022v27_MtCO2_flat.csv")
     df = pd.read_csv(path)
 
 # Limpieza básica de datos
